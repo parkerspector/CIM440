@@ -1,4 +1,8 @@
 var eyeSize= 15;
+var pointX= 35;
+var pointY=35;
+var heightX= 290;
+var widthY= 220;
 
 function setup() {
   // put setup code here
@@ -15,9 +19,9 @@ function draw() {
   ellipse(250,230,150,150)
 
   //left eye
-  ellipse(220,220,35,35);
+  ellipse(220,220,pointX,pointY);
   //right eye
-  ellipse(290,220,35,35);
+  ellipse(heightX,widthY,35,35);
 
   //left pupil
   fill("blue");
