@@ -22,15 +22,15 @@ function draw(){
   background(255);
   //pointx=100;
   //pointy=100;
-  point X= mouseX;
-  point Y= mouseY;
+  pointX = mouseX;
+  pointY = mouseY;
 
   fill(faceColor);
   rect(pointX -100, pointY -100, 200,200);//face
   fill(255);
-  elllipse (pointX, pointY, 10,10);
-  ellispe (pointX + 20, pointY -20,30,30);
-  ellipse (pointX - 20, pointY -20, 30,30);
+ellipse(pointX, pointY, 10,10);
+ellipse(pointX + 20, pointY -20, 30,30);
+ellipse(pointX - 20, pointY -20, 30,30);
 
   //arc(x,y,width,height,start,end)
   arc(pointX,pointY + 10, 50,50,0,PI);
@@ -38,14 +38,14 @@ function draw(){
   //ellipse (point2, point2, 10, 10);
 }//end of draw
 
-funtion mousePressed(){
-  faceColor= "red";
+function mousePressed(){
+  faceColor = "red";
 }
 
 function mouseReleased(){
   faceColor= "blue";
 }
 
-funtion keyPressed(){
+function keyPressed(){
   faceColor="white"
 }
