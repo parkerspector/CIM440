@@ -3,7 +3,7 @@ var pointY=0;
 
 var point2; // variable undefined
 
-car faceColor= "blue"
+var faceColor= "blue"
 
 function setup(){
   //put swtup code here
