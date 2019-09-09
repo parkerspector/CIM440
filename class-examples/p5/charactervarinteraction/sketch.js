@@ -22,8 +22,8 @@ function draw(){
   background(255);
   //pointx=100;
   //pointy=100;
-  point x= mouseX;
-  point y= mouseY;
+  point X= mouseX;
+  point Y= mouseY;
 
   fill(faceColor);
   rect(pointX -100, pointY -100, 200,200);//face
