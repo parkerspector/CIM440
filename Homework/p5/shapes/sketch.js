@@ -3,6 +3,7 @@ var pointX= 35;
 var pointY=35;
 var heightX= 290;
 var widthY= 220;
+var pupilColor= "blue";
 
 function setup() {
   // put setup code here
@@ -24,11 +25,11 @@ function draw() {
   ellipse(heightX,widthY,35,35);
 
   //left pupil
-  fill("blue");
+  fill(pupilColor);
   stroke ("blue");
   ellipse(230,220,eyeSize,eyeSize);
   //right pupil
-  fill("blue");
+  fill(pupilColor);
   stroke ("blue");
   ellipse(300,220,eyeSize,eyeSize);
 
