@@ -3,6 +3,8 @@ var pointY=0;
 
 var point2; // variable undefined
 
+car faceColor= "blue"
+
 function setup(){
   //put swtup code here
   createCanvas(500,500);
@@ -42,4 +44,8 @@ funtion mousePressed(){
 
 function mouseReleased(){
   faceColor= "blue";
+}
+
+funtion keyPressed(){
+  faceColor="white"
 }
