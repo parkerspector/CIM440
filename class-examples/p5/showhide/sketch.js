@@ -1,5 +1,10 @@
+var puppyImage;
 
 
+var show;
+var hide;
+
+var showAndHide= false;
 
 function preload(){
 //use to load media
@@ -8,20 +13,25 @@ puppyImage = loadImage("puppy.jpg");
 
 
 function setup(){
-  //put swtup code here
+  //put setup code here
   createCanvas(400,400);
-
+  show= createButton("Show");
+  hide= createButton("Hide");
+  show.mousePressed(function(){
+    showAndHide = true;
+  });
+  hide.mousePressed(function(){
+    showAndHide = false;
+  });
 }
 
 function draw(){
-  //put drawing code here
-  //image var, x pos, y pos
-image(puppyImage,0,0);
-//image var, x pos, y pos, width, height
-//dividing the width and height by a number scales proportionally
+  background(255);
+if(showAndHide == true){
 image(puppyImage,0,0, puppyImage.width/4,puppyImage.height/4);
-//Don't choose a random size
-image(puppyImage,200,200, 154,200);
+
 }
+
+text("Click show and hide to see a puppy" 10,10);
 
 //end of document
