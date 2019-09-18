@@ -15,7 +15,7 @@ function setup() {
   colorButton.position(50,50);
   colorButton.mousePressed(function(){
     faceColor="pink"
-  })
+  });
 }
 
 function draw() {
