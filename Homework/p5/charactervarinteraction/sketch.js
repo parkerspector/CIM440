@@ -5,6 +5,7 @@ var heightX= 290;
 var widthY= 220;
 var pupilColor= "blue";
 var colorButton;
+var faceColor = "orange";
 
 function setup() {
   // put setup code here
@@ -20,7 +21,22 @@ function setup() {
 
 function draw() {
   // put drawing code here
+  var drawMessage = "This message is in the draw loop";
+  console.log(drawMessage);
+  background(255);
 
+  //Use an if statement to change background color
+
+  if(mouseX< width/2){
+    //do something
+    console.log("left hand side");
+    background("blue");
+  }
+  if(mouseX> width/2){
+    //do something
+    console.log("right hand side");
+    background("grey");
+  }
   //body
   fill(faceColor);//adjusts inner shape color
   stroke ("brown");//outer edge color
@@ -48,21 +64,9 @@ function draw() {
   stroke("red");
   rect(215,280,50,5);//rect starts drawming from left hand corner
 
-  var drawMessage = "This message is in the draw loop";
-  console.log(drawMessage);
-  background(255);
 
-  //Use an if statement to change background color
 
-  if(mouseX< width/2){
-    //do something
-    console.log("left hand side");
-  }
-  if(mouseX> width/2){
-    //do something
-    console.log("right hand side");
-    background("grey");
-  }
+}
 
 
 function mousePressed(){
