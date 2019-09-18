@@ -88,10 +88,4 @@ function keyPressed(){
     //what you want to happen goes in here
     faceColor="red";
   }
-
 }
-
-
-
-
-//end of document
