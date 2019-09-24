@@ -2,8 +2,8 @@
 // Puppy image "puppies" by www.petian.net is licensed under CC BY-NC-ND 2.0  https://search.creativecommons.org/photos/4f271583-e45d-4faf-bfc8-7291c7c1e3c3
 // dinosaur "Rupenhorn Dinosaur #4" by Kristian_Laban is licensed under CC BY-NC 2.0 https://search.creativecommons.org/photos/96213ba5-e9b6-4f2f-91e4-da28b9fcad22
 
-var puppy, dinosaur, sloth;
-var pButton, dButton, sButton;
+var puppy, dinosaur, sloth, quokka, koala;
+var pButton, dButton, sButton, qButton, kButton;
 
 var currentImage = 0;
 //var currentAnimal won't work because puppy has no value at this point of the program
@@ -16,6 +16,8 @@ function preload(){
   puppy = loadImage("images/puppy.jpg");
   dinosaur = loadImage("images/dinosaur.jpg");
   sloth = loadImage("images/sloth.jpg");
+  quokka= loadImage("images/quokka.jpg");
+  koala= loadImage("images/koala.jpg");
 }
 function setup() {
   // put setup code here
@@ -33,6 +35,14 @@ function setup() {
   sButton.mousePressed(function(){
     currentImage = 2;
   });
+  qButton = createButton("Quokka");
+  qButton.mousePressed(function(){
+    currentImage = 3;
+  });
+  kButton = createButton("Koala");
+  kButton.mousePressed(function(){
+    currentImage = 4;
+  });
 }
 
 function draw() {
@@ -48,6 +58,12 @@ function draw() {
   }else if(currentImage ==2){
     //show sloth
     currentAnimal=sloth
-  }
+  }else if(currentImage ==3){
+    //show quokka
+    currentAnimal=quokka
+  }else if(currentImage ==4){
+      //show koala
+      currentAnimal=koala
+    }
   image(currentAnimal, 0,0,currentAnimal.width/4,currentAnimal.height/4);
 }
