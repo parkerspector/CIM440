@@ -8,8 +8,8 @@ var currentImage = 0;
 //var currentAnimal=puppy won't work because puppy has no value at this point of the program
 
 var imageArray = [];
-var hitX[100,200];
-var hitY[300,300];
+var hitX = [100,200];
+var hitY = [300,300];
 var hitSize=50;
 
 
@@ -41,11 +41,10 @@ function draw() {
 function mousePressed(){
   if(mouseX > hitX[0] && mouseX < hitX[0] + hitSize && mouseY > hitY[0] && mouseY < hitY[0] + hitSize){
     console.log("Button 0");
-    curentImage = currentImage + 1;
+    currentImage = currentImage + 1;
 
     if(currentImage==3){
       currentImage=0;
     }//end of currentImage ==3 if statement
   }//end of hitzone
 }//end of mousePressed
-}
