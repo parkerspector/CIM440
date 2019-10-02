@@ -47,11 +47,11 @@ function mousePressed(){
       currentImage=0;
     }//end of currentImage ==3 if statement
     if(mouseX > hitX[1] && mouseX < hitX[1] + hitSize && mouseY > hitY[1] && mouseY < hitY[1] + hitSize){
-      console.log("Button 0");
-      currentImage = currentImage - 0;
+      console.log("Button 1");
+      currentImage = currentImage - 1;
 
       if(currentImage==3){
-        currentImage=0;
+        currentImage=1;
       }
   }//end of hitzone
 }
