@@ -50,8 +50,8 @@ function mousePressed(){
       console.log("Button 1");
       currentImage = currentImage - 1;
 
-      if(currentImage==3){
-        currentImage=1;
+      if(currentImage== -1){
+        currentImage= 4;
       }
   }//end of hitzone
 }
