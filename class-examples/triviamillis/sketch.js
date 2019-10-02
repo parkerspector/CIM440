@@ -87,6 +87,7 @@ function draw() {
     //reset to inactive state
     currentOption = -1;
     startTimer = true;
+    prevMillis = millis();
 
   }// end of currentOption =! 1
 
