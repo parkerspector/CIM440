@@ -20,7 +20,8 @@ seasonSelect.changed(function(){
 
 
   });
-
+  sunX = width/2;
+  sunY = height * 2;
 }
 
 function draw() {
@@ -34,9 +35,12 @@ function draw() {
     console.log("spring");
   }else if(seasonType == "summer"){
     console.log("summer");
+    fill("orange");
+    stroke("red");
     ellipse(width/2, height, width, height/2);
+    sunY = sunY -1;
   }else(
     console.log("blank");
-    text("Make a selection", 100, 10);
+    text("Make a selection", 100, 20);
   )
 }//end of draw loop
