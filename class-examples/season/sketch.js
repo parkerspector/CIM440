@@ -37,10 +37,14 @@ function draw() {
     console.log("summer");
     fill("orange");
     stroke("red");
-    ellipse(width/2, height, width, height/2);
-    sunY = sunY -1;
-  }else(
+    ellipse(width/2, height, width, height);
+
+    if(sunY > height){
+      sunY = sunY -1;
+
+    }
+  }else{
     console.log("blank");
     text("Make a selection", 100, 20);
-  )
+  }
 }//end of draw loop
