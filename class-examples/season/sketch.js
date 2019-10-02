@@ -1,6 +1,9 @@
 var seasonSelect;
 var seasonType= "";
 
+var sunX = 0;
+var sunY = 0;
+
 function setup() {
 //put setup code here
 createCanvas(400,400);
