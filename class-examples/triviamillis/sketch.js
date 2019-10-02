@@ -10,6 +10,12 @@ var currentQuestion = 0;
 
 var answerText = "";
 
+var startTimer= false;
+
+var interval = 5000;
+var prevMillis = 0;
+
+
 function setup() {
   // put setup code here
   createCanvas(400,400);
@@ -48,7 +54,15 @@ function draw() {
   text(questions[currentQuestion], 20,100);
   text(options[currentQuestion], 20,150);
 
-  text(answerText, 20 ,200);
+
+
+  if(startTime == true){
+    text(answerText, 20 ,200);
+    if(millis()-prevMillis > interval){
+      prevMillis = millis();
+      startTimer = false;
+    }//end of time
+  }//end of timer == true
 
   // if currentOption is not equal to -1
   if(currentOption != -1){
@@ -72,6 +86,7 @@ function draw() {
 
     //reset to inactive state
     currentOption = -1;
+    startTimer = true;
 
   }// end of currentOption =! 1
 
