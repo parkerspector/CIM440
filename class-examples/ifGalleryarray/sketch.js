@@ -51,7 +51,7 @@ function mousePressed(){
       currentImage = currentImage - 1;
 
       if(currentImage== -1){
-        currentImage= 4;
+        currentImage= 6;
       }
   }//end of hitzone
 }
