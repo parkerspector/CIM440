@@ -13,8 +13,8 @@ var rectY= 400;
 
 
 function preload(){
-  throwB = loadImage("image/dog.jpg");
-  returnB = loadImage("image/dogbone.jpg");
+  throwB = loadImage("image/dognoball.png");
+  returnB = loadImage("image/dogwithball.png");
 }
 
   function setup() {
