@@ -74,9 +74,9 @@ function draw() {
     image(returnB,rectX,rectY,returnB.width/4,returnB.height/4);
 
     if(currentImage ==1){
-      if(rectX < width +10 && rectY > -10){
-        rectX = rectX - 1;
-        rectY = rectY + 1;
+      if(rectX > width -10 && rectY < 10){
+        rectX = rectX - 2;
+        rectY = rectY + 2;
       }
     }
   }
