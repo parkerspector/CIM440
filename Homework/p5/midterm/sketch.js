@@ -4,12 +4,16 @@ var tButton , rButton;
 var currentImage = -1;
 
 var boneX = 0;
-var boneY = 400;
+var boneY = 450;
 
 var moveDog = false;
 
 var rectX = 0;
 var rectY= 400;
+
+var throwDog= false;
+
+
 
 
 function preload(){
@@ -19,7 +23,7 @@ function preload(){
 
   function setup() {
     // put setup code here
-    createCanvas(400,400);
+    createCanvas(550,450);
 
     tButton = createButton("Throw");
     tButton.mousePressed(function(){
@@ -38,31 +42,46 @@ function draw() {
   // put drawing code here
   console.log("currentImage"+ currentImage);
 
-  image(throwB,0,0,throwB.width/4,throwB.height/4);
 
   if(currentImage ==0){
-    //show dog
+    image(throwB,0,250,throwB.width/4,throwB.height/4);
 
+    //show dog
     if(boneX < width -10 && boneY > 10){
       boneX = boneX + 1;
       boneY = boneY - 1;
     }else{
       moveDog = true;
     }
-
-
-
-  if(currentImage ==1){
-    //show dog with bone
-    image(returnB,0,0,returnB.width/4,returnB.height/4);
 }
+
+
   if(moveDog == true){
-    rect(200,200,20,20);
-  }else if(rectX < width -10 && rectY > 10)
+    currentImage = -1;
+    //show dog with ball
+    if(rectX < width -10 && rectY > 10){
       rectX = rectX + 1;
       rectY = rectY - 1;
+
+    }else{
+      throwDog=true;
+    }
+
+    image(throwB,rectX,rectY,throwB.width/4,throwB.height/4);
+
+  }
+  if(throwDog== true){
+    image(returnB,rectX,rectY,returnB.width/4,returnB.height/4);
+
+    if(currentImage ==1){
+      if(rectX < width +10 && rectY > -10){
+        rectX = rectX - 1;
+        rectY = rectY + 1;
+      }
+    }
   }
 
 
   ellipse(boneX, boneY, 10,10);
+  fill("red");
 }
