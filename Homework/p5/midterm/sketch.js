@@ -12,8 +12,6 @@ var moveDog = false;
 var rectX = 0;
 var rectY= 400;
 
-var beach = false;
-var summer = false;
 
 
 
@@ -47,8 +45,6 @@ function preload(){
 
 function draw(){
     background(grass);
-}else{
-  background(sand);
 }
   
 
