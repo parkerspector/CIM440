@@ -1,5 +1,6 @@
-var throwB, returnB;
-var tButton , rButton;
+var throwB, returnB, grass, sand;
+var tButton , rButton, gButton, sButton;
+
 
 var currentImage = -1;
 
@@ -19,6 +20,7 @@ var throwDog= false;
 function preload(){
   throwB = loadImage("image/dognoball.png");
   returnB = loadImage("image/dogwithball.png");
+  grass= loadImage("image/grass.jpg");
 }
 
   function setup() {
@@ -33,10 +35,21 @@ function preload(){
     rButton.mousePressed(function(){
       currentImage = 1;
     });
+    gButton = createButton ("Grass");
+    gButton.mousePressed(function(){
+      currentImage=2;
+    });
+    sButton = createButton ("Sand");
+    sButton.mousePressed(function(){
+      currentImage=3;
+    });
   }
 
 function draw() {
-  background("lightblue")
+  background(grass);
+  if(currentImage==)
+
+  }
 
 
   // put drawing code here
@@ -53,7 +66,7 @@ function draw() {
     }else{
       moveDog = true;
     }
-}
+  }
 
 
   if(moveDog == true){
@@ -63,25 +76,31 @@ function draw() {
       rectX = rectX + 1;
       rectY = rectY - 1;
 
+
     }else{
       throwDog=true;
+      moveDog = false;
     }
 
     image(throwB,rectX,rectY,throwB.width/4,throwB.height/4);
 
   }
+
+
   if(throwDog== true){
     image(returnB,rectX,rectY,returnB.width/4,returnB.height/4);
 
-    if(currentImage ==1){
-      if(rectX > width -10 && rectY < 10){
-        rectX = rectX - 2;
-        rectY = rectY + 2;
+    if(currentImage == 1){
+      if(rectX > 0 && rectY < height){
+        rectX = rectX - 1;
+        rectY = rectY + 1;
       }
     }
+  }else{
+    ellipse(boneX, boneY, 10,10);
+    fill("red");
   }
 
 
-  ellipse(boneX, boneY, 10,10);
-  fill("red");
+
 }

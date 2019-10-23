@@ -20,7 +20,7 @@ function setup(){
   show.mousePressed(function(){
     showAndHide = true;
   });
-  hide.mousePressed(function(){
+  hidecl.mousePressed(function(){
     showAndHide = false;
   });
 }

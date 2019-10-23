@@ -47,4 +47,5 @@ function draw() {
     //show sloth
       image(sloth,0,0,sloth.width/4,sloth.height/4);
   }
+
 }
