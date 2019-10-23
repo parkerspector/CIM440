@@ -12,8 +12,8 @@ var moveDog = false;
 var rectX = 0;
 var rectY= 400;
 
-var throwDog= false;
-
+var beach = false;
+var summer = false;
 
 
 
@@ -37,19 +37,22 @@ function preload(){
     });
     gButton = createButton ("Grass");
     gButton.mousePressed(function(){
-      currentImage=2;
+      currentImage= 2;
     });
     sButton = createButton ("Sand");
     sButton.mousePressed(function(){
-      currentImage=3;
+      currentImage= 3;
     });
   }
 
-function draw() {
-  background(grass);
-  if(currentImage==)
-
+function draw(){
+  if(currentImage= 2){
+    background(grass);
+  }else{
+    currentImage=3;
   }
+
+
 
 
   // put drawing code here
@@ -100,7 +103,4 @@ function draw() {
     ellipse(boneX, boneY, 10,10);
     fill("red");
   }
-
-
-
 }
