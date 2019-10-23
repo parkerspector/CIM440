@@ -46,11 +46,11 @@ function preload(){
   }
 
 function draw(){
-  if(currentImage= 2){
-    background(grass);
-  }else{
-    currentImage=3;
-  }
+    background(grass);
+}else{
+  background(sand);
+}
+  
 
 
 
