@@ -1,4 +1,4 @@
-var throwB, returnB, grass, sand;
+var throwB, returnB,  grass, sand;
 var tButton , rButton, gButton, sButton;
 
 
@@ -8,9 +8,13 @@ var boneX = 0;
 var boneY = 450;
 
 var moveDog = false;
+var throwDog=false;
+var summer= true;
+var beach= false;
 
 var rectX = 0;
 var rectY= 400;
+
 
 
 
@@ -44,11 +48,7 @@ function preload(){
   }
 
 function draw(){
-    background(grass);
-}
-  
-
-
+  background("lightblue");
 
 
   // put drawing code here
@@ -66,6 +66,13 @@ function draw(){
       moveDog = true;
     }
   }
+
+if(currentImage ==2){
+  image(grass,550,450,grass.width,grass.height);
+}
+if(currentImage ==3){
+  image(sand,550,450,sand.width,sand.height);
+}
 
 
   if(moveDog == true){
@@ -90,7 +97,7 @@ function draw(){
     image(returnB,rectX,rectY,returnB.width/4,returnB.height/4);
 
     if(currentImage == 1){
-      if(rectX > 0 && rectY < height){
+      if(rectX > 90 && rectY < height){
         rectX = rectX - 1;
         rectY = rectY + 1;
       }
