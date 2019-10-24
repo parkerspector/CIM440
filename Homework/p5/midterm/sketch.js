@@ -9,13 +9,12 @@ var boneY = 450;
 
 var moveDog = false;
 var throwDog=false;
-var summer= true;
-var beach= false;
+
 
 var rectX = 0;
 var rectY= 400;
 
-
+var grassImage=-1;
 
 
 
@@ -23,6 +22,7 @@ function preload(){
   throwB = loadImage("image/dognoball.png");
   returnB = loadImage("image/dogwithball.png");
   grass= loadImage("image/grass.jpg");
+  sand= loadImage("image/sand.jpg");
 }
 
   function setup() {
@@ -39,16 +39,22 @@ function preload(){
     });
     gButton = createButton ("Grass");
     gButton.mousePressed(function(){
-      currentImage= 2;
+      grassImage= 0;
     });
     sButton = createButton ("Sand");
     sButton.mousePressed(function(){
-      currentImage= 3;
+      grassImage= 1;
     });
   }
 
 function draw(){
   background("lightblue");
+
+  if(grassImage== 0){
+    background(grass);
+  }else if(grassImage==1){
+    background(sand);
+  }
 
 
   // put drawing code here
