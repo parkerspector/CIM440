@@ -1,2 +1,2 @@
-# Fetch
-This example is about a dog fetching a ball on either grass or sand surface, depending on the button you press. The throw button will move a ball to the back corner for the dog to fetch, once the dog fetches the ball, press the return button to have the dog bring the ball back to you.
+# Air Hockey
+[Presentation](https://docs.google.com/presentation/d/1mNxJk9c41nKA2LicBjNH9Yzckj1cYYqYkv7KhtJ49kk/edit?usp=sharing)
