@@ -22,14 +22,16 @@ function mousePressed() {
   s.velocity.y = random(-5, 5);
 }
 
-function preload(){
-  // load media
+
+function preload() {
   hockey = loadImage("image/hockey.jpg");
 }
 
 function setup() {
   createCanvas(800, 400);
   //frameRate(6);
+
+
 
   paddleA = createSprite(30, height/2, 10, 100);
   paddleA.immovable = true;
@@ -132,6 +134,7 @@ if(paddleBMove == true){
     user = user + 1;
 
   }
+
 
   text(computer, 20,205);
   text(user, 770,205);
