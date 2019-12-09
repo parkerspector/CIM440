@@ -9,6 +9,12 @@ var paddleBMove = false;
 var computer = 0;
 var user = 0;
 
+fill(0);
+textSize(12);
+textFont('Georgia');
+text('Georgia', 12, 30);
+
+
 function mousePressed() {
 
   //create a sprite at the mouse position and store it in a temporary variable
