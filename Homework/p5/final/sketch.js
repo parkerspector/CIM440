@@ -33,7 +33,7 @@ function preload() {
 
 function setup() {
   createCanvas(800, 400);
-  textSize(21);
+  textSize(12);
   //frameRate(6);
 
 
