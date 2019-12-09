@@ -33,7 +33,7 @@ function preload() {
 
 function setup() {
   createCanvas(800, 400);
-  textSize(12);
+  textSize(20);
   //frameRate(6);
 
 
@@ -141,9 +141,9 @@ if(paddleBMove == true){
   }
 
 
-  text("computer", 20,205);
-  text("user", 730,205);
-  text("Air Hockey",0,10);
+  text(computer, 20,205);
+  text(user, 730,205);
+  text("Air Hockey",375,30);
 
 
     drawSprites();
